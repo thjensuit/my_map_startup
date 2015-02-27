@@ -1,0 +1,31 @@
+<?php
+$lang['locali.LOCATIONLIST'] = "LOCATION LIST";
+$lang['locali.View'] = "View";
+$lang['locali.Insert'] = "Insert";
+$lang['locali.Update'] = "Update";
+$lang['locali.Remove'] = "Remove";
+$lang['locali.Filter'] = "Filter";
+$lang['locali.Images'] = "Images";
+$lang['locali.All'] = "All";
+$lang['locali.Establishments'] = "Establishments";
+$lang['locali.Geocodes'] = "Geocodes";
+$lang['locali.Add'] = "Add";
+$lang['locali.Address'] = "Address";
+$lang['locali.Name'] = "Name (English)";
+$lang['locali.Name_vn'] = "Name (Vietnames)";
+$lang['locali.Category'] = "Category";
+$lang['locali.Phone'] = "Phone";
+$lang['locali.Url'] = "Url";
+$lang['locali.Logo'] = "Logo";
+$lang['locali.Latitude'] = "Latitude";
+$lang['locali.Longitude'] = "Longitude";
+$lang['locali.Description'] = "Description (English)";
+$lang['locali.Description_vn'] = "Description (Vietnames)";
+$lang['locali.Reset'] = "Reset";
+$lang['locali.Loadingdatafromserver'] = "Loading data from server";
+$lang['locali.Confirm'] = "Confirm";
+$lang['locali.Areyousureyouwanttoremovethisdata'] = "Are you sure you want to remove this data?";
+$lang['locali.Cancel'] = "Cancel";
+$lang['locali.Okay'] = "Okay";
+$lang['locali.Submit'] = "Submit";
+

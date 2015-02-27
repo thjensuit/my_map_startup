@@ -1,0 +1,24 @@
+<?php
+$lang['category.Category'] = "CATEGORY";
+$lang['category.View'] = "View";
+$lang['category.Insert'] = "Insert";
+$lang['category.Update'] = "Update";
+$lang['category.Remove'] = "Remove";
+$lang['category.Filter'] = "Filter";
+$lang['category.Reset'] = "Reset";
+$lang['category.Submit'] = "Submit";
+$lang['category.Name'] = "Name (English)";
+$lang['category.Name_vn'] = "Name (Vietnames)";
+$lang['category.IconList'] = "Icon List";
+$lang['category.Marker'] = "Marker";
+$lang['category.Description'] = "Description (English)";
+$lang['category.Description_vn'] = "Description (Vietnames)";
+$lang['category.Loadingdatafromserver'] = "Loading data from server";
+$lang['category.Confirm'] = "Confirm";
+$lang['category.Areyousureyouwanttoremovethisdata'] = "Are you sure you want to remove this data?";
+$lang['category.Cancel'] = "Cancel";
+$lang['category.Okay'] = "Okay";
+$lang['category.Reset'] = "Reset";
+$lang['category.Submit'] = "Submit";
+$lang['category.Clickicontoinfo'] = "Click icon to info!";
+$lang['category.ChooseFile'] = "Choose File";

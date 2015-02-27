@@ -1,0 +1,24 @@
+<?php
+$lang['category.Category'] = "DANH MỤC";
+$lang['category.View'] = "Xem";
+$lang['category.Insert'] = "Thêm";
+$lang['category.Update'] = "Cập nhật";
+$lang['category.Remove'] = "Xoá";
+$lang['category.Filter'] = "Lọc";
+$lang['category.reset'] = "Thiết lập lại";
+$lang['category.submit'] = "Lưu";
+$lang['category.Name'] = "Tên danh mục (tiếng anh)";
+$lang['category.Name_vn'] = "Tên danh mục (tiếng việt)";
+$lang['category.IconList'] = "Icon";
+$lang['category.Marker'] = "Marker";
+$lang['category.Description'] = "Mô tả (tiếng anh)";
+$lang['category.Description_vn'] = "Mô tả (tiếng việt)";
+$lang['category.Loadingdatafromserver'] = "Đang tải dữ liệu từ máy chủ";
+$lang['category.Confirm'] = "Đồng ý";
+$lang['category.Areyousureyouwanttoremovethisdata'] = "Bạn có chắc là muốn xoá dữ liệu này không?";
+$lang['category.Cancel'] = "Thoát";
+$lang['category.Okay'] = "Đồng ý";
+$lang['category.Reset'] = "Thiết lập lại";
+$lang['category.Submit'] = "Đồng ý";
+$lang['category.Clickicontoinfo'] = "Thông tin biểu tượng";
+$lang['category.ChooseFile'] = "Chọn tệp tin";
