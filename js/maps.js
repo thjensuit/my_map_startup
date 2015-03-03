@@ -1066,19 +1066,19 @@ var soundControl=0;
     $("#victim").addClass("help1");
     $("#victim").removeClass("help2");
     $("#victim").removeClass("help3");
-    if(soundControl==0){myVideo.play();soundControl=1} 
+//    if(soundControl==0){myVideo.play();soundControl=1} 
   }
   function help2(){
     $("#victim").addClass("help2");
     $("#victim").removeClass("help3");
     $("#victim").removeClass("help1");
-    if(soundControl==0){myVideo.play();soundControl=1} 
+//    if(soundControl==0){myVideo.play();soundControl=1} 
   }
   function help3(){
     $("#victim").addClass("help3");
     $("#victim").removeClass("help2");
     $("#victim").removeClass("help1");
-    if(soundControl==0){myVideo.play();soundControl=1} 
+//    if(soundControl==0){myVideo.play();soundControl=1} 
   }
   function dangerous(){
     setTimeout("help2()",1000);
