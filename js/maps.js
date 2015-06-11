@@ -1,5 +1,5 @@
 // Set url service app
-var urlRequest = "http://maps.vncgame.com/admin/";
+var urlRequest = "maps-admin.com:8080/";
 // var urlRequest = "http://localhost/my_map/admin/";
 var urlService  = urlRequest+"index.php/en/";
 var urlAvatar = "http://api.vncgame.com:8080/query/avatar/";
@@ -148,7 +148,7 @@ var dangerousTimeOut;
     var url = urlService+'service/get_maps?filter='+req;
     
     // Get request data
-      getRequest(url, function(data) {
+      $.get(url, function(data) {
            
           categoryMarkerList = JSON.parse(data.responseText);
       
@@ -303,23 +303,23 @@ var dangerousTimeOut;
   }
    
 
-  function getRequest(url, callback) {
-    // $('.loading').show();
-      var request;
-      if (window.XMLHttpRequest) {
-          request = new XMLHttpRequest(); // IE7+, Firefox, Chrome, Opera, Safari
-      } else {
-          request = new ActiveXObject("Microsoft.XMLHTTP"); // IE6, IE5
-      }
-      request.onreadystatechange = function() {
-          if (request.readyState == 4 && request.status == 200) {
-              callback(request);
-        // $('.loading').hide();
-          }
-      }
-      request.open("GET", url, true);
-      request.send();
-  }
+//  function getRequest(url, callback) {
+//    // $('.loading').show();
+//      var request;
+//      if (window.XMLHttpRequest) {
+//          request = new XMLHttpRequest(); // IE7+, Firefox, Chrome, Opera, Safari
+//      } else {
+//          request = new ActiveXObject("Microsoft.XMLHTTP"); // IE6, IE5
+//      }
+//      request.onreadystatechange = function() {
+//          if (request.readyState == 4 && request.status == 200) {
+//              callback(request);
+//        // $('.loading').hide();
+//          }
+//      }
+//      request.open("GET", url, true);
+//      request.send();
+//  }
 
   function getCalculateRoute(lng,lat){
     window.location.href = "#page_location_map";
@@ -338,7 +338,7 @@ var dangerousTimeOut;
     $('#list-category').empty();
     var url = urlService+'service/get_category';
     $("#mode-category").empty();
-    getRequest(url, function(data) {
+    $.get(url, function(data) {
           var data = JSON.parse(data.responseText);   
           if(localStorage.getItem('langs')!='lang-viet'){
                   $("#mode-category").append("<option value='category'>Category</option>");
@@ -370,7 +370,7 @@ var dangerousTimeOut;
     $('#list-detail').empty();
     $('#category-id').val(categoryId);
     var url = urlService+'service/get_list?id='+categoryId;
-    getRequest(url, function(data) {
+    $.get(url, function(data) {
           var data = JSON.parse(data.responseText);         
           for (var i = 0; i < data.length; i++) {
             
@@ -395,7 +395,7 @@ var dangerousTimeOut;
     var filter     = $('#search-list').val();
     
     var url = urlService+'service/get_list?id='+categoryId+"&q="+filter;
-    getRequest(url, function(data) {
+    $.get(url, function(data) {
           var data = JSON.parse(data.responseText);        
       $('#list-detail').empty();
           for (var i = 0; i < data.length; i++) {
@@ -422,7 +422,7 @@ var dangerousTimeOut;
     var filter     = $('#search-list-nearby').val();
     
     var url = urlService+'service/get_nearby_search?lat='+myLat+"&long="+myLong+"&option="+distances+"&q="+filter;
-    getRequest(url, function(data) {
+    $.get(url, function(data) {
           var data = JSON.parse(data.responseText);        
       $('#list-nearby').empty();
       if(localStorage.getItem('langs')!='lang-viet'){
@@ -458,7 +458,7 @@ var dangerousTimeOut;
     var inputDistance = $("#search-distance").val();
     
     var url = urlService+'service/get_nearby?lat='+myLat+"&long="+myLong+"&option="+distances+"&top="+selectedTop+"&range="+inputDistance;
-    getRequest(url, function(data) {
+    $.get(url, function(data) {
           var data = JSON.parse(data.responseText);        
       $('#list-nearby').empty();
       if(localStorage.getItem('langs')!='lang-viet'){
@@ -562,13 +562,13 @@ var dangerousTimeOut;
   function detailShowLocation(id){
     $('#show-images').empty();
     var url = urlService+'service/get_detail?id='+id;
-    getRequest(url, function(data) {
+    $.get(url, function(data) {
         var data = JSON.parse(data.responseText);        
         for (var i = 0; i < data.length; i++) {
         
         var urlGetImages = urlService+'service/get_images?id='+data[i]['markers_id'];
         
-        getRequest(urlGetImages, function(dataImages) {
+        $.get(urlGetImages, function(dataImages) {
                          
             var dataImages = JSON.parse(dataImages.responseText);        
               for (var i = 0; i < dataImages.length; i++) {
@@ -757,7 +757,7 @@ var dangerousTimeOut;
   //
   function displayListFriend(){
        var url = urlService+'service/get_list_friend';
-        getRequest(url, function(data) {
+        $.get(url, function(data) {
             var data = JSON.parse(data.responseText);  
             var icon;       
             for (var i = 0; i < data.length; i++) {
@@ -1007,7 +1007,7 @@ var myVideo=document.getElementById("video1");
 var soundControl=0;
   function getVictim(){
     var url = urlService+'service/get_victims';
-    getRequest(url, function(data) {
+    $.get(url, function(data) {
         var data = JSON.parse(data.responseText);  
           $('#list-victim').empty();
           flag=0;
@@ -1089,7 +1089,7 @@ var soundControl=0;
   function displayVictim(id){
     window.location.href="#page_home";
     var url = urlService+'service/get_victim?id='+id;
-    getRequest(url, function(data) {
+    $.get(url, function(data) {
         var data = JSON.parse(data.responseText);        
         for (var i = 0; i < data.length; i++) {
           var position = new google.maps.LatLng(parseFloat(data[i].member_latitude), parseFloat(data[i].member_longitude));

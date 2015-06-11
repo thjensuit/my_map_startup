@@ -18,7 +18,7 @@ $("#marker-category").change(function() {
 });
 
 /** Get request data category  **/
-getRequest("home/get_category", function(data) {
+$.get("home/get_category", function(data) {
          
         var data = JSON.parse(data.responseText);
     
@@ -29,21 +29,21 @@ getRequest("home/get_category", function(data) {
 
     });
 	
-function getRequest(url, callback) {
-    var request;
-    if (window.XMLHttpRequest) {
-        request = new XMLHttpRequest(); // IE7+, Firefox, Chrome, Opera, Safari
-    } else {
-        request = new ActiveXObject("Microsoft.XMLHTTP"); // IE6, IE5
-    }
-    request.onreadystatechange = function() {
-        if (request.readyState == 4 && request.status == 200) {
-            callback(request);
-			$('.loading').hide();
-        }
-    }
-    request.open("GET", url, true);
-    request.send();
-}
+//function getRequest(url, callback) {
+//    var request;
+//    if (window.XMLHttpRequest) {
+//        request = new XMLHttpRequest(); // IE7+, Firefox, Chrome, Opera, Safari
+//    } else {
+//        request = new ActiveXObject("Microsoft.XMLHTTP"); // IE6, IE5
+//    }
+//    request.onreadystatechange = function() {
+//        if (request.readyState == 4 && request.status == 200) {
+//            callback(request);
+//			$('.loading').hide();
+//        }
+//    }
+//    request.open("GET", url, true);
+//    request.send();
+//}
 
 </script>

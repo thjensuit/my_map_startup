@@ -251,7 +251,7 @@ $(document).ready(function() {
 
 	
 	/** Get request data category  **/
-	getRequest("location_list/get_category", function(data) {
+	$.get("location_list/get_category", function(data) {
          
         var data = JSON.parse(data.responseText);
     
@@ -261,22 +261,22 @@ $(document).ready(function() {
 
     });
 
-	function getRequest(url, callback) {
-    	var request;
-    	if (window.XMLHttpRequest) {
-       		request = new XMLHttpRequest(); // IE7+, Firefox, Chrome, Opera, Safari
-    	} else {
-        	request = new ActiveXObject("Microsoft.XMLHTTP"); // IE6, IE5
-    	}
-    	request.onreadystatechange = function() {
-        	if (request.readyState == 4 && request.status == 200) {
-            	callback(request);
-				$('.loading').hide();
-        	}
-    	}
-    	request.open("GET", url, true);
-    	request.send();
-	}
+//	function getRequest(url, callback) {
+//    	var request;
+//    	if (window.XMLHttpRequest) {
+//       		request = new XMLHttpRequest(); // IE7+, Firefox, Chrome, Opera, Safari
+//    	} else {
+//        	request = new ActiveXObject("Microsoft.XMLHTTP"); // IE6, IE5
+//    	}
+//    	request.onreadystatechange = function() {
+//        	if (request.readyState == 4 && request.status == 200) {
+//            	callback(request);
+//				$('.loading').hide();
+//        	}
+//    	}
+//    	request.open("GET", url, true);
+//    	request.send();
+//	}
 
 	/** Form submit action **/ 
 	
